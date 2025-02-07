@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporitzador</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <section id="temporitzador">
+        <h2>Rellotge Temporitzador</h2>
+        <p class="digitalFont" id="current-time"></p>
+        <input type="time" id="end-time">
+        <p></p>
+        <div>
+            <label>Horas:</label>
+            <input type="number" id="horas" min="0" value="0" onkeydown="return false;">
+            <label>Minutos:</label>
+            <input type="number" id="minutos" min="0" max="59" value="0" onkeydown="return false;">
+            <label>Segundos:</label>
+            <input type="number" id="segundos" min="0" max="59" value="10" onkeydown="return false;">
+        </div>
+        <p></p>
+        <form>
+            <input type="radio" id="exacta" name="option" value="horaExacta" checked>
+            <label for="html">Hora Exacta</label><br>
+            <input type="radio" id="falta" name="option" value="tempsFalta">
+            <label for="css">Quant temps falta</label><br>
+        </form>
+        <button id="start-timer">Inicia Temporitzador</button>
+        <button id="clear-timer">Eliminar Temporitzador</button>
+        <button id="themeToggle">🌙 Modo Oscuro</button>
+        <p class="digitalFont" id="time-remaining"></p>
+        <select id="alarm-sound">
+            <option value="sound1.mp3">Sonido 1</option>
+            <option value="sound2.mp3">Sonido 2</option>
+            <option value="santa-claus-laughing-252035.mp3">Sonido 3 Nadal Edition</option>
+        </select>
+    </section>
+    
+    <script src="../theme.js"></script>
+    <script src="temporitzador.js"></script>
+</body>
+</html>
